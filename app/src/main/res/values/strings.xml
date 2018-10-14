@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">flickrClient</string>
+    <string name="search">Поиск</string>
+    <string name="not_found">Ничего не найдено</string>
+    <string name="error_connection">Ошибка подключения к интернету!</string>
+    <string name="cancel">Назад</string>
+</resources>
