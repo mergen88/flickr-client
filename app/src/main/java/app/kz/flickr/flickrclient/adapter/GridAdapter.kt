@@ -50,7 +50,7 @@ class GridAdapter(context: Context) : ArrayAdapter<Photo>(context, R.layout.imag
             holder = convertView!!.tag as ViewHolder
         }
         holder.progressBar.visibility = View.VISIBLE
-        Picasso.get().load(photo.largeSquareUrl).placeholder(R.drawable.image_placeholder).into(holder.image, object: Callback{
+        Picasso.get().load(photo.largeSquareUrl).placeholder(R.drawable.image_placeholder).fit().into(holder.image, object: Callback{
             override fun onSuccess() {
                 holder.progressBar.visibility = View.GONE
             }
