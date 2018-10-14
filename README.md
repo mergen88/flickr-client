@@ -1,3 +1,2 @@
 # flickr-client
-Download debug apk
-https://github.com/mergen88/flickr-client/releases/download/debug/app-debug.apk
+[flickr-app.apk](https://github.com/mergen88/flickr-client/releases/download/debug/flickr-app.apk)
