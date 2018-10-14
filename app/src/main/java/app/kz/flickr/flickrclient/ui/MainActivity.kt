@@ -40,9 +40,6 @@ class MainActivity : BaseActivity(), ImagesLoader {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        presenter.subscribeLoader(this)
-
         gridView.adapter = adapter
         gridView.setOnScrollListener(object : AbsListView.OnScrollListener{
             override fun onScrollStateChanged(view: AbsListView?, scrollState: Int) {
@@ -54,7 +51,6 @@ class MainActivity : BaseActivity(), ImagesLoader {
                     }
                 }
             }
-
         })
         gridView.setOnItemClickListener { _, _, position, _ ->
             val mView = layoutInflater.inflate(R.layout.show_image, null)
@@ -77,6 +73,10 @@ class MainActivity : BaseActivity(), ImagesLoader {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        presenter.subscribeLoader(this)
+    }
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
         if(savedInstanceState!=null && savedInstanceState.containsKey("page")){
