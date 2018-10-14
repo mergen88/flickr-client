@@ -20,7 +20,6 @@ class FlickrService{
                 subscriber.onError(e)
             }
         }
-        Observable.create<PhotoList> {}
     }
     fun fl(text: String?, page: Int): PhotoList {
         val search = SearchParameters()
